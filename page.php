@@ -14,8 +14,19 @@ get_header();
 
 <section id="primary" class="content-area parallax">
     <div class="container">
-        <div class="col-10 text-justify section-home">
-            
+        <div class="text-justify section-home">
+            <?php
+
+                if ( is_active_sidebar( 'about' ) ) { ?>
+                    <section id="about_section" class="about-section">
+                        <div>
+                            <?php dynamic_sidebar( 'about' ); ?>
+                        </div>
+                    </section>
+                    
+                <?php }
+
+            ?>
             <?php /* Displays the text on the page */
                 if ( have_posts() ) :
 
@@ -38,11 +49,6 @@ get_header();
 <?php get_template_part( 'template-parts/display/display-craft' ); ?>
 
 
-    <div class="container">
-        <?php 
-            echo do_shortcode('[gallery order ="DESC" orderby="post_date"]');
-        ?>
-    </div>
 
 <?php
 get_footer(); ?>

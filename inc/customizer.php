@@ -69,7 +69,7 @@ function moss_customizer_register( $wp_customize ) {
             'label'             => __( 'Text', 'moss' ),
             'section'           => 'custom_footer_text',
             'settings'           => 'footer_text',
-            'type'              => 'textarea'
+            'type'              => 'text'
         )
     ) );
  	// Sanitize text

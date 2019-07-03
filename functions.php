@@ -115,18 +115,38 @@ wp_enqueue_script( 'moss-js', get_template_directory_uri() . '/library/js/moss.j
     ----------
 */
 
-function sidebar_widgets() {
-    register_sidebar( array(
-        'name'          => __( 'Moss Sidebar', 'Moss' ),
-        'id'            => 'primary',
-        'description'   => __( 'Widget will appear on the side of your page', 'custom' ),
-        'before_widget' => '<li id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</li>',
-        'before_title'  => '<h2 class="widget-title">',
-        'after_title'   => '</h2>'
-    ) );
+function moss_portfolio_widgets() {
+    $sidebars   = array(
+        'sidebar'   => array(
+            'name'          => __( 'Sidebar', 'moss' ),
+            'id'            => 'sidebar',
+            'description'   => __( 'Default Sidebar', 'moss' ),
+        ),
+        'about'     => array(
+            'name'          => __( 'About Section', 'moss' ),
+            'id'            => 'about',
+            'description'   => __( 'Widgets for the about section. Best to use the html widget and talk about yourself or what you do.', 'moss' ),
+        ),
+        'services'  => array(
+            'name'          => __( 'Services Section', 'moss' ),
+            'id'            => 'service',
+            'description'   => __( 'Widgets for the services section. Best to use the html widget and talk about what you have to offer.', 'moss' ),
+        ),
+    );
+
+    foreach( $sidebars as $sidebar ){
+        register_sidebar( array(
+            'name'          => esc_html( $sidebar['name'] ),
+            'id'            => esc_html( $sidebar['id'] ),
+            'description'   => esc_html( $sidebar['description'] ),
+            'before_widget' => '<section id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</section>',
+            'before_title'  => '<h2 class="widget-title" itemprop="name">',
+            'after_title'   => '</h2>',
+        ) );
+    }
 }
-add_action( 'widget_init', 'sidebar_widgets' );
+add_action( 'widgets_init', 'moss_portfolio_widgets' );
 
 remove_filter( 'the_content', 'wpautop' );
 
