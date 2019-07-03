@@ -10638,130 +10638,7 @@ a.text-dark:hover, a.text-dark:focus {
   .table .thead-dark th {
     color: inherit;
     border-color: #dee2e6; } }
-/* line 25, moss.scss */
-body {
-  margin: 0;
-  background-color: #474a4e;
-  height: 100%;
-  overflow-x: hidden; }
-  /* line 30, moss.scss */
-  body p {
-    font-family: 'Open Sans', sans-serif !important; }
-
-/* line 34, moss.scss */
-.text-justify {
-  text-align: justify; }
-
-/* line 38, moss.scss */
-.section-home {
-  height: 300px; }
-
-/* line 42, moss.scss */
-.navbar {
-  margin-bottom: 50px;
-  background-color: #1a1d1b; }
-
-/* line 46, moss.scss */
-.navbar-nav {
-  margin-top: 0; }
-  /* line 48, moss.scss */
-  .navbar-nav li {
-    margin-left: 3em;
-    display: inline-block;
-    padding: 7px; }
-
-/* line 55, moss.scss */
-.moss-logo img {
-  margin-left: 15px;
-  float: left !important; }
-
-/* line 59, moss.scss */
-.brand-name {
-  font-size: 3em;
-  display: inline-block;
-  padding: 7px;
-  margin-right: 50px;
-  font-family: 'Poiret One', cursive; }
-
-/* line 67, moss.scss */
-.parallax {
-  min-height: 600px; }
-
-/* line 70, moss.scss */
-.jumbotron-header {
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  border-bottom: #1a1d1b solid 4px;
-  background-color: #474a4e;
-  padding-top: 30%;
-  padding-bottom: 30%;
-  margin-bottom: 0; }
-  /* line 80, moss.scss */
-  .jumbotron-header img {
-    max-width: 100%;
-    max-height: 100%; }
-
-/* line 86, moss.scss */
-.jumbotron-portfolio {
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-color: #474a4e;
-  background-position: center center;
-  position: relative;
-  max-height: 400px;
-  padding-top: 30%;
-  margin-bottom: 0 !important;
-  overflow: hidden; }
-  /* line 98, moss.scss */
-  .jumbotron-portfolio img {
-    width: 100%;
-    height: 100%; }
-
-/* line 103, moss.scss */
-.image-fit {
-  max-width: 100%;
-  max-height: 100%; }
-
-/* line 107, moss.scss */
-.short-bio {
-  margin: 100px; }
-
-/* line 113, moss.scss */
-.jumbo-title {
-  background: rgba(26, 29, 27, 0.5);
-  color: white;
-  width: 50%;
-  visibility: hidden;
-  padding: 20px;
-  border-right: black solid 20px;
-  left: 0;
-  -webkit-transform: translateX(-100%);
-  /* Chrome, Opera 15+, Safari 3.1+ */
-  /* IE 9 */
-  transform: translateX(-100%);
-  /* Firefox 16+, IE 10+, Opera */ }
-  /* line 126, moss.scss */
-  .jumbo-title h1 {
-    color: white !important;
-    font-family: 'Poiret One', cursive;
-    margin-left: 15px; }
-  /* line 131, moss.scss */
-  .jumbo-title p {
-    margin-left: 25px;
-    font-family: 'Open Sans', sans-serif; }
-
-/* line 136, moss.scss */
-.loaded .jumbo-title {
-  visibility: visible;
-  -webkit-transform: translateX(0%);
-  /* Chrome, Opera 15+, Safari 3.1+ */
-  /* IE 9 */
-  transform: translateX(0%);
-  /* Firefox 16+, IE 10+, Opera */
-  -webkit-transition: all 1s 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: all 1s 0.4s cubic-bezier(0.645, 0.045, 0.355, 1); }
-
-/* line 146, moss.scss */
+/* line 1, preloader.scss */
 #loader-wrapper {
   position: fixed;
   top: 0;
@@ -10770,7 +10647,7 @@ body {
   height: 100%;
   z-index: 1000; }
 
-/* line 154, moss.scss */
+/* line 9, preloader.scss */
 #loader {
   display: block;
   position: relative;
@@ -10788,7 +10665,7 @@ body {
   /* Chrome, Firefox 16+, IE 10+, Opera */
   z-index: 1001; }
 
-/* line 172, moss.scss */
+/* line 27, preloader.scss */
 #loader:before {
   content: "";
   position: absolute;
@@ -10797,7 +10674,7 @@ body {
   animation: spin 3s linear infinite;
   /* Chrome, Firefox 16+, IE 10+, Opera */ }
 
-/* line 180, moss.scss */
+/* line 35, preloader.scss */
 #loader:after {
   content: "";
   position: absolute;
@@ -10839,7 +10716,7 @@ body {
     /* IE 9 */
     transform: rotate(360deg);
     /* Firefox 16+, IE 10+, Opera */ } }
-/* line 220, moss.scss */
+/* line 75, preloader.scss */
 #loader-wrapper .loader-section {
   position: fixed;
   top: 0;
@@ -10856,7 +10733,7 @@ body {
   right: 0; }
 
 /* L O A D E D */
-/* line 234, moss.scss */
+/* line 89, preloader.scss */
 .loaded #loader-wrapper .loader-section.section-left {
   -webkit-transform: translateY(-100%);
   /* Chrome, Opera 15+, Safari 3.1+ */
@@ -10866,13 +10743,13 @@ body {
   -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1); }
 
-/* line 243, moss.scss */
+/* line 98, preloader.scss */
 .loaded #loader {
   opacity: 0;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out; }
 
-/* line 248, moss.scss */
+/* line 103, preloader.scss */
 .loaded #loader-wrapper {
   visibility: hidden;
   -webkit-transform: translateY(-100%);
@@ -10884,22 +10761,147 @@ body {
   transition: all 0.3s 1s ease-out; }
 
 /* JavaScript Turned Off */
-/* line 260, moss.scss */
+/* line 115, preloader.scss */
 .no-js #loader-wrapper {
   display: none; }
 
-/* line 263, moss.scss */
+/* line 118, preloader.scss */
 .no-js h1 {
   color: #222222; }
 
-/* line 267, moss.scss */
+/* line 122, preloader.scss */
 #content {
   margin: 0 auto;
   padding-bottom: 50px;
   width: 80%;
   max-width: 978px; }
 
-/* line 275, moss.scss */
+/* line 1, navigation.scss */
+.navbar {
+  margin-bottom: 50px;
+  background-color: #1a1d1b; }
+
+/* line 5, navigation.scss */
+.navbar-nav {
+  margin-top: 0; }
+  /* line 7, navigation.scss */
+  .navbar-nav li {
+    margin-left: 3em;
+    display: inline-block;
+    padding: 7px; }
+
+/* line 14, navigation.scss */
+.moss-logo img {
+  margin-left: 15px;
+  float: left !important; }
+
+/* line 18, navigation.scss */
+.brand-name {
+  font-size: 3em;
+  display: inline-block;
+  padding: 7px;
+  margin-right: 50px;
+  font-family: 'Poiret One', cursive; }
+
+/* line 1, jumbotron.scss */
+.parallax {
+  min-height: 600px; }
+
+/* line 4, jumbotron.scss */
+.jumbotron-header {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  border-bottom: #1a1d1b solid 4px;
+  background-color: #474a4e;
+  padding-top: 30%;
+  padding-bottom: 30%;
+  margin-bottom: 0; }
+  /* line 14, jumbotron.scss */
+  .jumbotron-header img {
+    max-width: 100%;
+    max-height: 100%; }
+
+/* line 20, jumbotron.scss */
+.jumbotron-portfolio {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: #474a4e;
+  background-position: center center;
+  position: relative;
+  max-height: 400px;
+  padding-top: 30%;
+  margin-bottom: 0 !important;
+  overflow: hidden; }
+  /* line 32, jumbotron.scss */
+  .jumbotron-portfolio img {
+    width: 100%;
+    height: 100%; }
+
+/* line 37, jumbotron.scss */
+.image-fit {
+  max-width: 100%;
+  max-height: 100%; }
+
+/* line 41, jumbotron.scss */
+.service {
+  margin: 100px; }
+
+/* line 47, jumbotron.scss */
+.jumbo-title {
+  background: rgba(26, 29, 27, 0.5);
+  color: white;
+  width: 50%;
+  visibility: hidden;
+  padding: 20px;
+  border-right: black solid 20px;
+  left: 0;
+  -webkit-transform: translateX(-100%);
+  /* Chrome, Opera 15+, Safari 3.1+ */
+  /* IE 9 */
+  transform: translateX(-100%);
+  /* Firefox 16+, IE 10+, Opera */ }
+  /* line 60, jumbotron.scss */
+  .jumbo-title h1 {
+    color: white !important;
+    font-family: 'Poiret One', cursive;
+    margin-left: 15px; }
+  /* line 65, jumbotron.scss */
+  .jumbo-title p {
+    margin-left: 25px;
+    font-family: 'Open Sans', sans-serif; }
+
+/* line 70, jumbotron.scss */
+.loaded .jumbo-title {
+  visibility: visible;
+  -webkit-transform: translateX(0%);
+  /* Chrome, Opera 15+, Safari 3.1+ */
+  /* IE 9 */
+  transform: translateX(0%);
+  /* Firefox 16+, IE 10+, Opera */
+  -webkit-transition: all 1s 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 1s 0.4s cubic-bezier(0.645, 0.045, 0.355, 1); }
+
+/* line 33, moss.scss */
+body {
+  margin: 0;
+  background-color: #474a4e;
+  height: 100%;
+  overflow-x: hidden; }
+  /* line 38, moss.scss */
+  body p {
+    font-family: 'Open Sans', sans-serif !important; }
+
+/*
+
+    I N D E X / P A G E . P H P
+
+*/
+/* line 49, moss.scss */
+.section-home {
+  height: 100%;
+  text-align: justify; }
+
+/* line 55, moss.scss */
 .footer {
   margin-top: 30px; }
 
