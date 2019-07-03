@@ -24,11 +24,10 @@ get_header();
                     
 
             <?php /* Displays the text on the page */
-                if ( have_posts() ) :
-
+                if ( have_posts() ) : 
                     while( have_posts() ) : the_post(); 
 
-                    the_excerpt(); 
+                    get_template_part( 'template-parts/content');
 
                     endwhile;
                 endif;

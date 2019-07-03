@@ -36,6 +36,8 @@ if ( ! function_exists( 'moss_setup' ) ):
         add_theme_support( 'post-thumbnails' );
         set_post_thumbnail_size( 250, 250 );
 
+        add_image_size( 'moss-article', 367, 252, true );
+
         /**
          * add support for menus
          */
