@@ -10,12 +10,11 @@ get_header();
 
 ?>
 <!-- Displays the jumbotron -->
-<!-- <?php get_template_part( 'template-parts/preload/preload-screen' ); ?>  -->
+<?php get_template_part( 'template-parts/preload/preload-screen' ); ?> 
 
-<section id="primary" class="content-area parallax">
-    <div class="container">
+<section id="content" class="content-area parallax">
+    <div class="container-fluid">
         <div class="section-home">
-
                     <section id="about" class="about-section">
                         <div>
                             <?php dynamic_sidebar( 'about' ); ?>
@@ -32,7 +31,7 @@ get_header();
                     endwhile;
                 endif;
             ?>
-        </div> <!-- .col-8 -->
+        </div> <!-- .section-home -->
     </div> <!-- .container -->
 </section>
 <?php get_template_part( 'template-parts/display/display-portrait' ); ?>

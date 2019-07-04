@@ -10881,13 +10881,39 @@ a.text-dark:hover, a.text-dark:focus {
   -webkit-transition: all 1s 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 1s 0.4s cubic-bezier(0.645, 0.045, 0.355, 1); }
 
-/* line 33, moss.scss */
+/*
+
+    This file is used to style how posts display on the front page.
+
+*/
+/* line 7, grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+/* line 9, grid.scss */
+.grid ::after {
+  content: '';
+  display: block;
+  clear: both; }
+
+/* line 15, grid.scss */
+.grid-item {
+  width: inherit;
+  margin-bottom: 15px; }
+
+/* 
+
+    B O D Y
+
+*/
+/* line 39, moss.scss */
 body {
   margin: 0;
   background-color: #474a4e;
   height: 100%;
   overflow-x: hidden; }
-  /* line 38, moss.scss */
+  /* line 44, moss.scss */
   body p {
     font-family: 'Open Sans', sans-serif !important; }
 
@@ -10896,12 +10922,14 @@ body {
     I N D E X / P A G E . P H P
 
 */
-/* line 49, moss.scss */
+/* line 55, moss.scss */
 .section-home {
-  text-align: justify; }
+  text-align: justify;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0; }
 
-/* line 54, moss.scss */
+/* line 63, moss.scss */
 .footer {
   margin-top: 30px; }
-
 /*# sourceMappingURL=moss.css.map */
