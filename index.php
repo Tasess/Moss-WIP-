@@ -13,33 +13,23 @@ get_header();
 <?php get_template_part( 'template-parts/preload/preload-screen' ); ?> 
 
 <section id="content" class="content-area parallax">
-    <div class="container-fluid">
-        <div class="section-home">
-                    <section id="about" class="about-section">
-                        <div>
-                            <?php dynamic_sidebar( 'about' ); ?>
-                        </div>
-                    </section>
-                    
+    <section id="about" class="about-section">
+        <div>
+            <?php dynamic_sidebar( 'about' ); ?>
+        </div>
+    </section>
+<!-- POST LOOP START HERE -->
 
-            <?php /* Displays the text on the page */
-                if ( have_posts() ) : 
-                    while( have_posts() ) : the_post(); 
+    <?php get_template_part( 'template-parts/content' ); ?>
 
-                    get_template_part( 'template-parts/content');
-
-                    endwhile;
-                endif;
-            ?>
-        </div> <!-- .section-home -->
-    </div> <!-- .container -->
+<!-- POST LOOP END HERE -->
 </section>
 <?php get_template_part( 'template-parts/display/display-portrait' ); ?>
-        <section id="service">
-            <div class="service">
-                <?php dynamic_sidebar( 'service' ); ?>
-            </div>
-        </section>
+    <section id="service">
+        <div class="service">
+            <?php dynamic_sidebar( 'service' ); ?>
+        </div>
+    </section>
 
 
 <?php get_template_part( 'template-parts/display/display-craft' ); ?>

@@ -36,7 +36,7 @@ if ( ! function_exists( 'moss_setup' ) ):
         add_theme_support( 'post-thumbnails' );
         set_post_thumbnail_size( 250, 250 );
 
-        add_image_size( 'moss-article', 367, 252, true );
+        add_image_size( 'moss-article', 400, 400, true );
 
         /**
          * add support for menus
@@ -181,3 +181,36 @@ function moss_excerpt( $length ) {
 }
 
 add_filter( 'excerpt_length', 'moss_excerpt', 999 );
+
+/*
+    ----------
+    E. F E A T U R E D  I M A G E  * R E Q U I R E D *
+    ----------
+*/
+add_action( 'save_post', 'moss_check_thumbnail' );
+add_action( 'admin_notices', 'moss_thumbnail_error' );
+
+function moss_check_thumbnail($post_id) {
+
+    if( get_post_type($post_id) != 'post' )
+    return;
+
+    if ( !has_post_thumbnail( $post_id ) ) {
+        set_transient( "has_post_thumbnail", "no" );
+
+        remove_action( 'save_post', 'moss_check_thumbnail' );
+
+        wp_update_post( array( 'ID' => $post_id, 'post_status' => 'draft' ) );
+
+        add_action( 'save_post', 'moss_check_thumbnail' );
+    } else {
+        delete_transient( "has_post)thumbnail" );
+    }
+}
+
+function moss_thumbnail_error() {
+    if ( get_transient( "has_post_thumbnail" ) == "no" ) {
+        echo "<div id='message' class='error'><strong>You must select a Featured Image, use an image at least 400x400. Your post is saved but it cannot be published.</strong></div>";
+        delete_transient( "has_post_thumbnail" );
+    }
+}

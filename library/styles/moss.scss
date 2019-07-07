@@ -29,8 +29,6 @@ $dark:    #1a1d1b;
 // J U M B O T R O N  I M P O R T
 @import "../styles/jumbotron.scss";
 
-// A R T I C L E S  I M P O R T
-@import "../styles/grid.scss";
 /* 
 
     B O D Y
@@ -52,13 +50,13 @@ body {
 
 */
 
-.section-home {
-    text-align: justify;
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
+.moss_article {
+    margin: 15px;
 }
+.post-thumbnail {
 
+    margin: auto 0;
+}
 //F O O T E R 
 .footer {
     margin-top: 30px;
